@@ -6,10 +6,10 @@
 
   ### Goals
   The goal of this project is to enable:
-  * Allow devolopers to use Alpine on there Windows machines for simple tasks (basically everything except kernel modules)
-  * Allow developers to use the WSL with a very low foodprint (compared to debian/ubuntu)
-  * Use the official tar.gz Userland release without building a custom userland tar.gz
-  * Make the project "self maintained", aka. don't require to ship any dependencies that require beeing updated and automatically pull the latest stable userland from the official source (WIP)
+  * Allow devolopers to use Alpine on their Windows machines for simple tasks (basically everything except kernel modules)
+  * Allow developers to use the WSL with a very low footprint (compared to debian/ubuntu)
+  * Use the official tar.gz userland release without building a custom userland tar.gz
+  * Make the project "self maintained", i.e. don't require to ship any dependencies that require being updated and automatically pull the latest stable userland from the official source (WIP)
 
 ### Project Status
 This project is an active repo maintained by agowa338.
@@ -39,9 +39,9 @@ This project is an active repo maintained by agowa338.
 ## Getting Started (Project Participants)
   0. Clone this repository and open it with Visual Studio ( >= 2017 )
   1. Generate a test certificate.
-  2. Import it to your Cert:\CurrentUser\My and Cert:\LocalMachine\TrustedPublisher as well as Cert:\LocalMachine\Root. If you have a dedecated testing VM, import the certificate only to Cert:\CurrentUser\My on your production system, or you may make yourself vulnerable to all kinds of attacks. Thats the reason why you would want to protect this certificate as nearly good as a bought code signing certificate.
+  2. Import it to your Cert:\CurrentUser\My and Cert:\LocalMachine\TrustedPublisher as well as Cert:\LocalMachine\Root. If you have a dedicated testing VM, import the certificate only to Cert:\CurrentUser\My on your production system, or you may make yourself vulnerable to all kinds of attacks. That is the reason why you would want to protect this certificate as nearly well as a bought code signing certificate.
   3. Open `DistroLauncher-Appx/MyDistro.appxmanifest`, select the Packaging tab, select Choose Certificate, click the Configure Certificate drop down and select Create test certificate.
-  4. Edit your distribution-specific information in `DistroSpecial.h`. **NOTE: The `DistroSpecial::Name` variable must uniquely identify your distribution and cannot change from one version of your app to the next. Or it will register as another distribution within WSL, so if you want to havbe one distro twicke, you would change this name.**
+  4. Edit your distribution-specific information in `DistroSpecial.h`. **NOTE: The `DistroSpecial::Name` variable must uniquely identify your distribution and cannot change from one version of your app to the next. Otherwise it will register as another distribution within WSL. If you want to have one distro twice, you would change this name.**
   5.  Update `Alpine.appxmanifest`. There are several properties that are in the manifest that will need to be updated with your specific values.
       - Make sure to note the `Identity Publisher` value (by default, `"CN=DistroOwner"`). We'll need that for testing the application.
       - Make sure that `<desktop:ExecutionAlias Alias="mydistro.exe" />` is set to something that ends in ".exe". This is the command that will be used to launch your distro from the command line.
@@ -49,7 +49,7 @@ This project is an active repo maintained by agowa338.
 ## Build and Test
   To help building and testing the Alpine Launcher project, there are the following scripts to automate some tasks. You can either choose to use these scripts from the command line, or work directly in Visual Studio, whatever your preference is. 
 
-  **Please Note** some sideloading/deployment steps don't work if you mix and match Visual Studio and the command line for development. If you run into errors while trying to deploy your app after already deploying it once, the easiest step is usually just to uninstall the previously sideloaded version and try again. By rightclicking the App and selecting "Uninstall", if wsl is still installed, but the app is not, just run `wslconfig.exe /u Alpine`.
+  **Please Note** some sideloading/deployment steps don't work if you mix and match Visual Studio and the command line for development. If you run into errors while trying to deploy your app after already deploying it once, the easiest step is usually just to uninstall the previously sideloaded version and try again. By right-clicking the App and selecting "Uninstall", if WSL is still installed, but the app is not, just run `wslconfig.exe /u Alpine`.
 
 ### Setting up your Windows Environment
 You will need a Windows environment to test that your app installs and works as expected. To set up a Windows environment for testing you can follow the steps from the [Windows Dev Center](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines).
