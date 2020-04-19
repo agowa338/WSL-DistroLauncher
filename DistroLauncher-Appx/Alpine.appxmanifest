@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap2="http://schemas.microsoft.com/appx/manifest/uap/windows10/2" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10" xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities" IgnorableNamespaces="uap mp uap2 uap3 rescap desktop">
-  <Identity Name="36828agowa338.AlpineWSL" Version="1.3.2.0" Publisher="CN=060C3DE6-76FF-4382-8BCB-4D1E0E080DA7" ProcessorArchitecture="x64" />
+  <Identity Name="36828agowa338.AlpineWSL" Version="1.4.0.0" Publisher="CN=060C3DE6-76FF-4382-8BCB-4D1E0E080DA7" ProcessorArchitecture="x64" />
   <mp:PhoneIdentity PhoneProductId="854a7ec4-34a7-4ca8-b7f5-aaa3f2dc1d60" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Alpine WSL</DisplayName>

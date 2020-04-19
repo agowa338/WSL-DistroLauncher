@@ -72,6 +72,12 @@ HRESULT InstallDistribution(bool createUser, PCWSTR tarGzFilename)
 		}
 	}
 
+	// Set a root password
+	if (DistroSpecial::askForRootPassword) {
+		std::wcout << std::endl << "To (re-)set root password run `wsl.exe --user root --distribution Alpine passwd`" << std::endl << std::endl;
+		std::system("C:\\Windows\\System32\\wsl.exe --user root --distribution Alpine passwd");
+	}
+
 	return hr;
 }
 

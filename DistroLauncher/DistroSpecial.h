@@ -20,6 +20,7 @@ namespace DistroSpecial
 		L"/bin/sed -i 's/^export PATH/#export PATH/' /etc/profile" // Remove the explicitly exported path variable, as wsl is preinitializing path for us, so that windows applications can also be called from within wsl.
 	}; 
 	const std::wstring commandLineAddUser = L"/usr/sbin/adduser -g '' -D ";
+	const bool askForRootPassword = true;
 	// const std::wstring commandLineAddUserToGroups = L"/usr/sbin/usermod -aG adm,cdrom,sudo,dip,plugdev ";
 	const std::wstring commandLineAddUserToGroups = L"/usr/sbin/usermod -aG adm,floppy,cdrom,tape,wheel,ping ";
 	const std::wstring commandLineDeleteUSer = L"/usr/sbin/deluser --remove-home ";
